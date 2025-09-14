@@ -5,5 +5,7 @@
 ## Контакты
 
 Корпоративная почта: st141083@student.spbu.ru
+
 Основная почта: nicholas.shestakov@gmail.com
+
 Телеграм: @Kolya_shesterka
