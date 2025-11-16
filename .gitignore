@@ -173,4 +173,7 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
+# Haffman code test files
+haffman_code_test_files
+
 # End of https://www.toptal.com/developers/gitignore/api/python
