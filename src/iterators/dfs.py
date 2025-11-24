@@ -36,3 +36,18 @@ class Graph:
             dfs_step(vertex)
 
         return visited_vertices_list
+
+    def __iter__(self):
+        return _GraphIterable(self.dfs())
+
+
+class _GraphIterable:
+    def __init__(self, dfs_vertices_list):
+        self.dfs_vertices_list = dfs_vertices_list
+        self.index = 0
+
+    def __next__(self):
+        if self.index < len(self.dfs_vertices_list):
+            self.index += 1
+            return self.dfs_vertices_list[self.index - 1]
+        raise StopIteration
