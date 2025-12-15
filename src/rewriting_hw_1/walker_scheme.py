@@ -1,3 +1,6 @@
+from math import floor
+
+
 class WalkerScheme:
     def __init__(self, events_and_probabilities: list[tuple[str, int]]):
         if sum(probability[1] for probability in events_and_probabilities) != 1:
@@ -67,7 +70,7 @@ class WalkerScheme:
 
         return table
 
-
-scheme = WalkerScheme([("A", 0.1), ("B", 0.5), ("C", 0.4)])
-
-print(scheme.table)
+    def get_random(self, probability):
+        if self.table[floor(probability * len(self.table))][2] > probability:
+            return self.table[floor(probability * len(self.table))][0]
+        return self.table[floor(probability * len(self.table))][1]
